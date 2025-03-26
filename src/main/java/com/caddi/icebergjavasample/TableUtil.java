@@ -29,7 +29,7 @@ public class TableUtil {
 
     //TODO, 実際の環境に合わせて設定内容を変えること
     catalogConfig.put("io-impl", "org.apache.iceberg.aws.s3.S3FileIO");
-    catalogConfig.put("s3.endpoint", "http://localhost:9001");
+    catalogConfig.put("s3.endpoint", "http://localhost:9000");
     catalogConfig.put("s3.path-style-access", "true");
     catalogConfig.put("s3.region", "us-east-2");
     catalogConfig.put("s3.access-key-id", "admin");
