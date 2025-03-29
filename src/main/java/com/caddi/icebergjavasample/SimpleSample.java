@@ -32,7 +32,7 @@ public class SimpleSample {
 
         var transaction = tbl.newTransaction();
         var append = transaction.newAppend();
-
+        transaction.newOverwrite().
         var fileId = OffsetDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd_HHmmss"))
                 + "_"
                 + UUID.randomUUID();
