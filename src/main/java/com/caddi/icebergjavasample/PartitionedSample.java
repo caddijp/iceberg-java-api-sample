@@ -87,7 +87,7 @@ public class PartitionedSample {
             }
         }
 
-        // writer が生成したファイルをすべて append opertionに追加しコミットする。
+        // writer が生成したファイルをすべて append operationに追加しコミットする。
         for (var dataFile : writer.dataFiles()) {
             append.appendFile(dataFile);
         }

@@ -19,7 +19,11 @@ public class TestHelper {
     var table = catalog.loadTable(TableIdentifier.of(Namespace.of(namespace), tableName));
 
     var result = new ArrayList<Map<String, Object>>();
-    var scan = IcebergGenerics.read(table).build();
+    var scan = IcebergGenerics.read(table)
+            // select, where の指定ができる
+            //.select("id", "name")
+            //.where(Expressions.lessThan("price", 100))
+            .build();
     for (var i = scan.iterator(); i.hasNext(); ) {
       var data = i.next();
       var map = new HashMap<String, Object>();
